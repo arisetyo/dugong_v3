@@ -2,7 +2,7 @@
 
 **Version 3.0.1**
 
-This is the third iteration of my personal framework Dugong. The first one was pretty successful and had a pretty good run, helping me and other developers creating web-based solution.
+This is the third iteration of my personal framework [Dugong](https://code.google.com/archive/p/dugong/). The first one was pretty successful and had a pretty good run, helping me and other developers creating web-based solution.
 
 The second one never came into completion.
 
