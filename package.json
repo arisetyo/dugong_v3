@@ -1,0 +1,24 @@
+{
+  "name": "dugong_v3",
+  "version": "1.0.0",
+  "description": "boilerplate framework for monolith systems",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch views --watch public --watch . -e js,ejs,css,scss server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fastify",
+    "htmx"
+  ],
+  "author": "Arie M. Prasetyo",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/one-line-logger": "^2.0.2",
+    "@fastify/view": "^10.0.2",
+    "ejs": "^3.1.10",
+    "fastify": "^5.2.1"
+  }
+}
