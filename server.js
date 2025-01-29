@@ -20,11 +20,11 @@ server.register(FastifyView, {
 
 // Endpoints = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 server.get('/', async (_, reply) => {
-  return reply.view(`${VIEWS_DIR}/index.ejs`)
+  return reply.view(`${VIEWS_DIR}/pages/index.ejs`)
 })
 
-server.get('/api/clicked', async (_, reply) => {
-  reply.type('text/html').send('<h2>Clicked</h2>')
+server.get('/api/greet', async (_, reply) => {
+  reply.type('text/html').send('<h2>Hello from <strong>Fastify</strong></h2>')
 })
 
 // Start the server = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

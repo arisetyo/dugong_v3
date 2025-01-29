@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../components/HEAD', { TITLE: 'Dugong v3' }) %>
+<body>
+  <header></header>
+  <main>
+    <h1>Hello, World!</h1>
+    <h2>I am Dugong v3</h2>
+
+    <p>Click the button below to see the magic of <strong>htmx</strong></p>
+    
+    <button
+      hx-get="/api/greet"
+      hx-target="#result"
+    >
+      Click me
+    </button>
+    <div id="result"></div>
+  </main>
+  <%- include('../components/molecules/Footer') %>
+</body>
+</html>
