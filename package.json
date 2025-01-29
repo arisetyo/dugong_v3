@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
-    "ignore": ["public/styles.css"]
+    "ignore": [
+      "public/styles.css"
+    ]
   },
   "keywords": [
     "fastify",
@@ -22,6 +24,8 @@
     "@fastify/one-line-logger": "^2.0.2",
     "@fastify/static": "^8.0.4",
     "@fastify/view": "^10.0.2",
+    "@supabase/supabase-js": "^2.48.1",
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "fastify": "^5.2.1",
     "sass": "^1.83.4"
