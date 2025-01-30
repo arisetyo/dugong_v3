@@ -1,22 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
   <%- include('../components/HEAD', { TITLE: 'Dugong v3' }) %>
+
+  <!-- import htmx for this page -->
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <!-- import Alpine for this page -->
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <!-- script used specifically by this page -->
+  <script src="assets/index.js" defer></script>
+</head>
+
 <body class="index-page">
   <%- include('../components/molecules/Header') %>
+  
   <main>
-    <h1>Hello, World!</h1>
-    <h2>I am Dugong v3</h2>
+    <div>
+      <h1>Welcome to Dugong v3</h1>
+      <p>
+        This is a simple monolithic web framework using Fastify, EJS, htmx, and Alpine.js. It both serves server-side rendered pages and API endpoints.
+      </p>
+    </div>
 
-    <p>Click the button below to see the magic of <strong>htmx</strong></p>
-    
-    <button
-      hx-get="/api/greet"
-      hx-target="#result"
-    >
-      Click me
-    </button>
-    <div id="result"></div>
+    <div class="content">
+      <h2>Page interactivity</h2>
+
+      <section
+        x-data="{
+          isClicked: false,
+        }"
+      >
+        <button
+          hx-get="/api/greet"
+          hx-target="#result"
+          @click="isClicked = true"
+        >
+          Load data from server
+        </button>
+
+        <div x-show="isClicked" id="result" class="result"></div>
+      </section>
+
+      <section
+        x-data="{
+          clickCount: 0,
+        }"
+      >
+        <button
+          @click="clickCount += 1"
+        >
+          Client-side interaction
+        </button>
+
+        <div class="result" x-show="clickCount > 0">
+          <span
+            x-text="clickCount"
+          ></span>
+        </div>
+      </section>
+
+      <h2>Client-side routing</h2>
+
+      <div class="csr">
+        <p>This is an example of client-side routing with htmx</p>
+        <nav>
+          <a
+            href="/faq"
+            hx-get="/faq"
+            hx-trigger="click"
+            hx-target="#subpage"
+            hx-replace-url="true"
+          >
+            FAQ
+          </a>
+          <a
+            href="/contact"
+            hx-get="/contact"
+            hx-trigger="click"
+            hx-target="#subpage"
+            hx-replace-url="true"
+          >
+            Contact
+          </a>
+        </nav>
+        <div class="csr-content">
+          <div id="subpage">
+            <p>Hello again!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>    
   </main>
+
   <%- include('../components/molecules/Footer') %>
 </body>
 </html>

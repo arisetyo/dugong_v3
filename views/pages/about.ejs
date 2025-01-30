@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../components/HEAD', { TITLE: 'Dugong v3 - About' }) %>
+
+<%- include('../components/HEAD', { TITLE: 'Dugong v3 - About' }) %>
+
 <body class="about-page">
+
   <%- include('../components/molecules/Header') %>
+  
   <main>
-    <h1>About Dugong</h1>
-    <p>Dugong is a simple Node.js web application framework that uses EJS as its templating engine.</p>
+    <section>
+      <h1>About Dugong</h1>
+      <p>Dugong is a simple Node.js web application framework that uses EJS as its templating engine, htmx for interaction with the server, and Alpine.js for client-side interactivity.</p>
+    </section>
+
+    <section>
+      <h2>Purpose</h2>
+      <p>This framework serves as a boilerplate of how to create SSR pages served by Fastify.</p>
+      <p>It serves as a starting scaffold on how you can integrate the aforementioned main technologies to create a monolithic web-application.</p>
+
+      <h2>Motivation</h2>
+      <ul>
+        <li>Create a monolith framework where I can work with the back-end and front-end at the same time.</li>
+        <li>I want to work with HTML pages boosted by htmx and Alpine, that is served directly by Fastify.</li>
+        <li>The Fastify server works as both the page-renderer (for an SSR experience) and API service (eg. for data required by htmx).</li>
+        <li>I want to be able to reuse HTML components, so I use templates using EJS.</li>
+        <li>And lastly, I want to be able to use "modular" SCSS files, like in modern front-end frameworks.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tech stack</h2>
+      <p>
+        Main technologies used:
+        <ol>
+          <li>
+            <a href="https://fastify.dev/" target="_blank">Fastify</a>
+          </li>
+          <li>
+            <a href="https://ejs.co/" target="_blank">EJS</a>
+          </li>
+          <li>
+            <a href="https://htmx.org/" target="_blank">htmx</a>
+          </li>
+          <li>
+            <a href="https://sass-lang.com/" target="_blank">Sass</a>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Supporting technologies:
+        <ol>
+          <li>
+            <a href="https://alpinejs.dev/" target="_blank">Alpine.js</a>
+          </li>
+          <li>
+            <a href="https://supabase.com/" target="_blank">Supabase</a> (optional)
+          </li>
+        </ol>
+      </p>
+    </section>
+
   </main>
+
   <%- include('../components/molecules/Footer') %>
+
 </body>
 </html>

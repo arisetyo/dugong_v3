@@ -1,15 +1,55 @@
 body.index-page {
   main {
-    h2 {
-      
-    }
-    
-    p {
-      
-    }
-    
-    button {
+    padding: 20px;
 
+    .content {
+      section {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        gap: 20px;
+
+        .result {
+          width: 240px;
+          padding: 10px;
+          color: greenyellow;
+          background-color: black;
+          font-family: 'Courier New', Courier, monospace;
+          border-radius: 8px;
+        }
+      }
+
+      h2 {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin: 48px 0 12px;
+      }
+
+      .csr {
+        background-color: rgb(var(--secondary-accent));
+        padding: 16px;
+        border-radius: 8px;
+
+        nav {
+          a {
+            color: rgb(var(--primary-accent));
+            margin: 0 10px 0 0;
+          }
+        }
+
+        .csr-content {
+          padding: 20px 0 8px;
+          color: white;
+
+          #subpage {
+            a {
+              color: rgb(var(--primary-accent));
+              margin: 0 10px 0 0;
+            }
+          }
+        }
+      }
     }
   }
 }

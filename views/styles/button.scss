@@ -1,0 +1,11 @@
+button {
+  min-width: 240px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(var(--primary-accent));
+  color: rgb(var(--background-color));
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+}

@@ -29,3 +29,6 @@ It serves as a starting scaffold on how you can integrate the aforementioned mai
 - The Fastify server works as both the page-renderer (for an SSR experience) and API service (eg. for data required by htmx).
 - I want to be able to reuse HTML components, so I use templates using EJS.
 - And lastly, I want to be able to use "modular" SCSS files, like in modern front-end frameworks.
+
+## Note ⚠️
+The file `styles.css` in `public/assets` is generated automatically from the Sass files in the `styles/` folder. Do not edit it directly.

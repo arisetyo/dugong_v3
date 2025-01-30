@@ -50,7 +50,7 @@ server.register(FastifyStatic, {
 // Compile Sass to CSS = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 const compileSass = async () =>{
   const result = await sass.compileAsync(join(__dirname, 'views/styles/MAIN.scss'))
-  fs.writeFileSync(join(__dirname, 'public/styles.css'), result.css)
+  fs.writeFileSync(join(__dirname, 'public/assets/styles.css'), result.css)
 }
 compileSass()
 
@@ -85,10 +85,25 @@ server.get('/about', async (_, reply) => {
   return reply.view(`${VIEWS_DIR}/pages/about.ejs`)
 })
 
+// SSR sub-pages
+server.get('/faq', async (request, reply) => {
+  if (!request.headers['hx-request']) {
+    return reply.view(`${VIEWS_DIR}/pages/index.ejs`)
+  }
+  return reply.view(`${VIEWS_DIR}/subpages/faq.ejs`)
+})
+
+server.get('/contact', async (request, reply) => {
+  if (!request.headers['hx-request']) {
+    return reply.view(`${VIEWS_DIR}/pages/index.ejs`)
+  }
+  return reply.view(`${VIEWS_DIR}/subpages/contact.ejs`)
+})
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // API's
 server.get('/api/greet', async (_, reply) => {
-  reply.type('text/html').send('<h2>Hello from <strong>Fastify</strong></h2>')
+  reply.type('text/html').send('<em>Hello from <strong>Fastify</strong></em>')
 })
 
 server.get('/api/messages', async (_, reply) => {

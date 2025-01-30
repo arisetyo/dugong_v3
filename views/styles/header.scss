@@ -1,7 +1,26 @@
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
 
-  a {
-    text-decoration: none;
+  .logo {
     color: rgb(var(--primary-accent));
+    margin-left: 20px;
+    font-weight: bold;
+  }
+
+  .menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    a {
+      text-decoration: none;
+      color: rgb(var(--primary-accent));
+      margin: 0 20px;
+      font-size: .9em;
+    }
   }
 }

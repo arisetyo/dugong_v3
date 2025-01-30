@@ -1,0 +1,137 @@
+body {
+  --primary-accent: 255, 238, 0;
+  --foreground-color: 160, 200, 255;
+  --background-color: 40, 44, 52;
+  --secondary-accent: 20, 22, 26;
+  font-family: "Arial", sans-serif;
+  background-color: rgb(var(--background-color));
+  color: rgb(var(--foreground-color));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+body.index-page main {
+  padding: 20px;
+}
+body.index-page main .content section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+body.index-page main .content section .result {
+  width: 240px;
+  padding: 10px;
+  color: greenyellow;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 8px;
+}
+body.index-page main .content h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 48px 0 12px;
+}
+body.index-page main .content .csr {
+  background-color: rgb(var(--secondary-accent));
+  padding: 16px;
+  border-radius: 8px;
+}
+body.index-page main .content .csr nav a {
+  color: rgb(var(--primary-accent));
+  margin: 0 10px 0 0;
+}
+body.index-page main .content .csr .csr-content {
+  padding: 20px 0 8px;
+  color: white;
+}
+body.index-page main .content .csr .csr-content #subpage a {
+  color: rgb(var(--primary-accent));
+  margin: 0 10px 0 0;
+}
+
+body.about-page main {
+  padding: 20px;
+}
+body.about-page main section {
+  margin: 0 0 30px 0;
+}
+body.about-page main section h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+body.about-page main section h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: normal;
+}
+body.about-page main section ul {
+  list-style-type: square;
+  padding: 0 0 0 20px;
+}
+body.about-page main section ul li {
+  margin-bottom: 10px;
+}
+body.about-page main section ol {
+  list-style-type: decimal;
+  padding: 0 0 0 20px;
+}
+body.about-page main section ol li {
+  margin-bottom: 10px;
+}
+body.about-page main section ol li a {
+  text-decoration: none;
+  color: rgb(var(--primary-accent));
+  font-size: 0.9em;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+header .logo {
+  color: rgb(var(--primary-accent));
+  margin-left: 20px;
+  font-weight: bold;
+}
+header .menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+header .menus a {
+  text-decoration: none;
+  color: rgb(var(--primary-accent));
+  margin: 0 20px;
+  font-size: 0.9em;
+}
+
+footer {
+  font-size: 0.8em;
+  font-style: italic;
+  margin-top: 40px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+
+button {
+  min-width: 240px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(var(--primary-accent));
+  color: rgb(var(--background-color));
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+}

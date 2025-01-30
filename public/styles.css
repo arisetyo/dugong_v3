@@ -1,9 +1,0 @@
-body {
-  --primary-accent: 255, 238, 0;
-  font-family: "Arial", sans-serif;
-}
-
-header a {
-  text-decoration: none;
-  color: rgb(var(--primary-accent));
-}

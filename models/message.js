@@ -1,3 +1,4 @@
+// Load mesages from the database
 const loadMessages = async SUPABASE => {
   const { data, error } = await SUPABASE
     .from('guestbook')
