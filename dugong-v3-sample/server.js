@@ -24,8 +24,8 @@ import { loadMessages } from './models/message.js'
 dotenv.config()
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-const SERVICE_PORT_NUMBER = 3330
-const VIEWS_DIR = 'views';
+const SERVICE_PORT_NUMBER = 3331
+const VIEWS_DIR = 'views'
 
 
 // Create the server = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =

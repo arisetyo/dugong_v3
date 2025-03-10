@@ -1,3 +1,13 @@
 /node_modules
 
+/dugong-v3-base/node_modules
+/dugong-v3-sample/node_modules
+
+/dugong-v3-base/public/assets/styles.css
+/dugong-v3-sample/public/assets/styles.css
+
 .env
+.DS_Store
+
+*/.env
+*/.DS_Store
