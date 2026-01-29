@@ -67,7 +67,7 @@ This guide provides architectural guidance for implementing PDF document reading
 
 | Package | Purpose |
 |---------|---------|
-| `pdf-parse` or `pdf-parse-debugging-disabled` | PDF text extraction |
+| `pdf-parse-debugging-disabled` | PDF text extraction |
 | `@fastify/multipart` or `multer` | File upload handling |
 | `@aws-sdk/client-s3` | S3-compatible storage operations |
 | Database driver (e.g., `pg`, `mongoose`) | Metadata persistence |

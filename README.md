@@ -30,5 +30,16 @@ It serves as a starting scaffold on how you can integrate the aforementioned mai
 - I want to be able to reuse HTML components, so I use templates using EJS.
 - And lastly, I want to be able to use "modular" SCSS files, like in modern front-end frameworks.
 
+## Documentation
+
+This codebase includes early architectural and how-to documentation under `docs/`:
+
+- `docs/how-tos/database-pattern.md` – database access and layering patterns
+- `docs/how-tos/file-upload.md` – file upload architecture for direct-to-server uploads
+- `docs/how-tos/pdf-creation.md` – generating PDFs from server-side templates
+- `docs/how-tos/pdf-reading.md` – reading and processing PDF content
+
+These guides describe opinionated patterns that the Dugong v3 framework is expected to follow as features are implemented.
+
 ## Note ⚠️
 The file `styles.css` in `public/assets` is generated automatically from the Sass files in the `styles/` folder. Do not edit it directly.
