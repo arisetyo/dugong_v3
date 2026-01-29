@@ -1,0 +1,11 @@
+@use "global";
+
+// styles for pages
+@use "../pages/index.scss" as index;
+
+// styles for generic components
+@use "../components/molecules/header/Header.scss" as header;
+
+// styles for page specific components
+
+// styles for generic atomic components

@@ -1,0 +1,29 @@
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .info-container {
+    position: relative;
+    min-width: 300px;
+
+    font-size: 10px;
+    color: rgb(var(--secondary-accent));
+  }
+  
+  .user-menu {
+    display: flex;
+    align-items: center;
+
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background-color: rgb(var(--secondary-accent));
+      cursor: pointer;
+      overflow: hidden;
+    }
+  }
+}

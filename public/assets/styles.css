@@ -1,0 +1,41 @@
+body {
+  --primary-accent: 255, 238, 0;
+  --foreground-color: 160, 200, 255;
+  --background-color: 40, 44, 52;
+  --secondary-accent: 20, 22, 26;
+  font-family: "Arial", sans-serif;
+  background-color: rgb(var(--background-color));
+  color: rgb(var(--foreground-color));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+body.index-page main {
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+header .logo {
+  color: rgb(var(--primary-accent));
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+footer {
+  font-size: 0.8em;
+  font-style: italic;
+  margin-top: 40px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
