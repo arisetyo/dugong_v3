@@ -1,7 +1,7 @@
 {
-  "name": "chrysalis",
-  "version": "1.0.0",
-  "description": "CBT creator",
+  "name": "dugong",
+  "version": "3.0.0",
+  "description": "monolithic web application framework",
   "main": "server.js",
   "type": "module",
   "scripts": {
