@@ -8,6 +8,26 @@
 
 This is a web application built using the Dugong monolithic framework with Fastify, EJS, htmx, Alpine.js, and SCSS as the main technologies.
 
+## SDD (Spec Driven Development)
+
+This project follows a Spec Driven Development (SDD) approach, which emphasizes the importance of having clear and detailed specifications for each feature before implementation. This ensures that all features are well-defined, meet the necessary requirements, and are properly documented.
+
+Important guidelines for SDD in this project:
+- Feature specifications are located in the `docs/specs/` directory
+- All new features should have a corresponding markdown file in that directory describing the feature, its requirements, and any relevant details
+- When implementing a new feature, refer to its specification document for guidance and ensure that the implementation meets the outlined requirements
+- If a feature specification does not exist for a new feature, always ask the user to create one before proceeding with implementation. This ensures that all features are well-documented and meet the necessary requirements before development begins.
+- Specifications are project artifacts and should be treated as living documents that can be updated as needed to reflect changes in requirements or implementation details.
+
+## Architecture
+
+The application follows a "clean architecture" style, with a clear separation of concerns between different layers of the application. The main layers include:
+- Data layer: responsible for database interactions and data models, located in the `models/` directory. The `migration/` directory contains database migration scripts to manage schema changes.
+- Domain layer: contains the business logic and application rules, located in the `workers/` directory for specialized handlers and `libs/` for utility functions
+- Presentation layer: the `views/` directory contains EJS templates and SCSS files for the frontend, while `server.js` handles routing and server logic. The `public/` directory contains static assets like images and client-side JavaScript.
+
+The presentation layer interacts with the domain layer to retrieve data and render views, while the domain layer interacts with the data layer to perform database operations and business logic. This separation allows for better maintainability, testability, and scalability of the application.
+
 ## Tech Stack
 
 ### Backend
